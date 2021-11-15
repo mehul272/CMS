@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        ADD MARKS
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/datastyles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>
+            FORM to add Marks of Mid Term and End Term
+        </h2>
+        <form action="/add_markscalculate" method="post" onsubmit="return validation()">
+            <h1>MID TERM MARKS</h1>
+            <input type="hidden" value="<%= user.PRN %>" name="PRN">
+            <div class="form-group">
+                <label for="prn">Subject-ID:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.msubject_id%>" id="midmarks1" name="MSubjectID" required>
+                <span id="mmarks1" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID2:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.msubject_id2%>" id="midmarks2" id="midmarks2" name="MSubjectID2" required>
+                <span id="mmarks2" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID3:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.msubject_id3%>" id="midmarks3" name="MSubjectID3" required>
+                <span id="mmarks3" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID4:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.msubject_id4%>" id="midmarks4" name="MSubjectID4" required>
+                <span id="mmarks4" class="text-danger font-weight-bold"></span>
+            </div>
+            <h1>END TERM MARKS</h1>
+            <div class="form-group">
+                <label for="prn">Subject-ID:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.esubject_id%>" id="endmarks1" name="ESubjectID" required>
+                <span id="emarks1" class="text-danger font-weight-bold"></span>
+
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID2:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.esubject_id2%>" id="endmarks2" name="ESubjectID2" required>
+                <span id="emarks2" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID3:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.esubject_id3%>" id="endmarks3" name="ESubjectID3" required>
+                <span id="emarks3" class="text-danger font-weight-bold"></span>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID4:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID Marks"
+                    value="<%= user.esubject_id4%>" id="endmarks4" name="ESubjectID4" required>
+                <span id="emarks4" class="text-danger font-weight-bold"></span>
+            </div>
+            <button type=" submit " class="btn btn-primary ">ADD</button>
+        </form>
+    </div>
+
+    <!-- <script type="text/javascript">
+
+        function validation() {
+            const mmark1 = document.getElementById("midmarks1");
+            const mmark2 = document.getElementById("midmarks2");
+            const mmark3 = document.getElementById("midmarks3");
+            const mmark4 = document.getElementById("midmarks4");
+
+            const emark1 = document.getElementById("endmarks1");
+            const emark2 = document.getElementById("endmarks2");
+            const emark3 = document.getElementById("endmarks3");
+            const emark4 = document.getElementById("endmarks4");
+
+
+            //mid tem
+            if (isNaN(mmark1)) {
+                document.getElementById("mmarks1").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(mmark2)) {
+                document.getElementById("mmarks2").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(mmark3)) {
+                document.getElementById("mmarks3").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(mmark4)) {
+                document.getElementById("mmarks4").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+
+            //end term
+            if (isNaN(emark1)) {
+                document.getElementById("emarks1").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(emark2)) {
+                document.getElementById("emarks2").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(emark3)) {
+                document.getElementById("emarks3").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+            if (isNaN(emark4)) {
+                document.getElementById("emarks4").innerHTML = "Marks should be only digits not characters";
+                return false;
+            }
+
+        }
+    </script> -->
+
+</body>
+
+</html>

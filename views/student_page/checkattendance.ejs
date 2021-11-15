@@ -1,0 +1,214 @@
+<!-- <a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a Secret</a> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/student.css">
+
+    <title>Welcome to CMS</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="logo1.JPG" alt="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <!-- <li><a href="home.html" class="but">Sign-out</a></li> -->
+            <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+        </ul>
+    </header>
+
+
+    <div class="student"><br><br>
+
+        <nav style="position: relative; left: -2rem; margin-top: 7rem;">
+            <ul>
+                <a href="/student-home">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="home.png" alt="home">
+                    </li>
+                </a>
+                <a href="/profile_student">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="user.png" alt="user">
+                    </li>
+                </a>
+                <a href="/index">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="exam.png" alt="exam">
+                    </li>
+                </a>
+                <a href="/studentresults">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="medical-results.png" alt="result">
+                    </li>
+                </a>
+                <a href="/checkattendance">
+                    <li style="padding: 1rem; background-color: aliceblue;">
+                        <img style="width: 2.5rem;" src="calendar (1).png" alt="attendance">
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+
+        <div class="container">
+
+
+
+            <h1 class="my-h1">
+                My Attendance
+            </h1>
+            <br>
+
+
+            <table class="table table-dark table-striped my-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>PRN</th>
+                        <th>Present Days</th>
+                        <th>Total Days</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= user.PRN %>
+                        </td>
+                        <td>
+                            <%= user.first_name %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <%= user.PRN %>
+                        </td>
+                        <td>
+                            <%= user.present_days %>
+                        </td>
+                        <td>
+                            <%= user.total_days %>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted" style="background-color: rgba(198, 194, 255, 0.733);">
+        <!-- Section: Social media -->
+        <br>
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-9"></i>CLASS MANAGEMENT SYSTEM
+                        </h6>
+                        <p>
+                            CMS is a complete solution for college database maanagement, providing data security and integrity. Easy to use UI with assistance to make best out of your time.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Sections
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Admin</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Student</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Faculty</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Started</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Team</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Contact</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i>Pune, India</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i> info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> 1234567890</p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgb(115, 75, 224); color: cornsilk;">
+            <img src="logo1.JPG" style="max-height: 4rem;">
+
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

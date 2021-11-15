@@ -1,0 +1,234 @@
+<%- include('partials/header') %>
+
+    <div class="container" id="home1" style="min-width:80%">
+        <div class="row">
+            <div class="col">
+                <span class="intro"><span
+                        style="font-size: 3.2rem; color: rgb(115, 75, 224);line-height: 4.5rem;font-weight: 600;">WELCOME
+                        TO<br></span>COLLEGE MANAGEMENT SYSTEM</span>
+                <!-- <a class="btn btn-light btn-lg myButton" href="/register" role="button">SIGN-IN</a> -->
+            </div>
+            <div class="col">
+                <img style="width: 34rem; margin-top: 5rem;" src="homepic.jpeg" alt="cms">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h1 class="team">OUR TEAM</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="atharva.jpeg" style="height: 160px;">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Atharva Pansare</h3>
+                        <h4 class="title">Python Pro Coder</h4>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="panther.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Prabhat Panwar</h3>
+                        <h4 class="title">Front End Web Developer</h4>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="goldy.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Lover Boy</h3>
+                        <h4 class="title">DSA UltraProMax Coder</h4>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="mehul.jpeg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Mehul Pansari</h3>
+                        <h4 class="title">Backend Web Developer</h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin-top: 5rem;" id="contact">
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+        </div>
+        <form action="/email" method="POST" id="form" onsubmit="return validation()">
+            <h3>Drop Us a Message</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" id="name" placeholder="Your Name *"
+                            value="" autocomplete="off" />
+                        <span id="textname" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtEmail" class="form-control" id="email" placeholder="Your Email *"
+                            value="" autocomplete="off" />
+                        <span id="emailid" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtPhone" class="form-control" id="phone"
+                            placeholder="Your Phone Number *" value="" autocomplete="off" />
+                        <span id="phonenumber" class="text-danger font-weight-bold"></span>
+                    </div>
+                    <div>
+                        <input type="submit" name="btnSubmit" class="btnContact" value="submit"></input>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control" id="text" placeholder="Your Message *"
+                            style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+    <script type="text/javascript">
+
+        function validation() {
+
+            var user = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            if (user == "") {
+                document.getElementById("textname").innerHTML = "Please Fill the Name Feild";
+                return false;
+            }
+            if ((user.length <= 2) || user.length > 20) {
+                document.getElementById("textname").innerHTML = "User Length must be between 2 and 20";
+                return false;
+            }
+            if (!isNaN(user)) {
+                document.getElementById("textname").innerHTML = "Only characters are allowed";
+                return false;
+            }
+
+
+            if (email == "") {
+                document.getElementById("emailid").innerHTML = "Please Fill the Email Feild";
+                return false;
+            }
+            if (email.indexof('@') <= 0) {
+                document.getElementById("emailid").innerHTML = "Email not Valid ** @ position is invalid";
+                return false;
+            }
+            if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+                document.getElementById("emailid").innerHTML = "Email not Valid ** . position is not correct";
+                return false;
+            }
+            
+            // if (phone == "")
+            //  {
+            //     document.getElementById("phonenumber").innerHTML = "Please Fill the Phone Number";
+            //     return false;
+            // }
+            // if (isNaN(phone)) {
+            //     document.getElementById("phonenumber").innerHTML = "Phone Number must be digits not characters";
+            //     return false;
+            // }
+            // if (phone.length != 10) {
+            //     document.getElementById("phonenumber").innerHTML = "Phone Number must be 10 digits";
+            //     return false;
+            // }
+
+        }
+
+
+    </script>
+
+
+    <!-- <script type="text/javascript">
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone")
+        const form = document.getElementById("form");
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+
+            checkInputs();
+        })
+
+        function checkInputs() {
+            const username = name.value.trim();
+            const user_email = email.value.trim();
+            const user_phone = phone.value.trim();
+
+            // if (username === '') {
+            //     seterror(name, "Username Cannot be empty");
+            // }
+            // else {
+            //     setSuccess(name);
+            // }
+
+            if (user_phone === '') {
+                seterror(phone, "Phone Number cannot be empty")
+            }
+            else if (user_phone.length < 10) {
+                seterror(phone, 'Phone Number cannot be less than 10 digits')
+            }
+            else {
+                setSuccess(phone);
+            }
+
+            // if (user_email === '') {
+            //     seterror(email, "Email cannot be empty");
+            // }
+            // else if (!isEmail(user_email)) {
+            //     seterror(email, "Invalid email ID");
+            // }
+            // else {
+            //     setSuccess(email);
+            // }
+        }
+
+        function seterror(input, message) {
+            const formControl = input.parentElement;
+            const small = formControl.querySelector('small');
+
+            small.innerText = message;
+
+            formControl.className = 'error'
+        }
+
+        function setSuccess() {
+            const formControl = input.parentElement;
+            formControl.className = 'success'
+        }
+
+        function isEmail(email) {
+            return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        }
+
+    </script> -->
+
+    <%- include('partials/footer') %>

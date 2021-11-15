@@ -1,0 +1,132 @@
+<!-- <a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a Secret</a> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/student.css">
+
+    <title>Welcome to CMS Results</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="logo1.JPG" alt="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <!-- <li><a href="home.html" class="but">Sign-out</a></li> -->
+            <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+        </ul>
+    </header>
+
+
+    <div class="student"><br><br>
+
+        <nav style="position: relative; left: -2rem; margin-top: 7rem;">
+            <ul>
+                <a href="/open_home">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="home.png" alt="home">
+                    </li>
+                </a>
+                <a href="/profile_teacher">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="user.png" alt="user">
+                    </li>
+                </a>
+                <a href="/marks ">
+                    <li style="padding: 1rem; background-color: aliceblue;">
+                        <img style="width: 2.5rem;" src="medical-results.png" alt="result">
+                    </li>
+                </a>
+                <a href="/add_mark">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="check_mark_006.jpg" alt="result">
+                    </li>
+                </a>
+                <a href="/attendance">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="calendar (1).png" alt="attendance">
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+
+        <div class="container">
+
+
+
+            <h1 class="my-h1">
+                Student Subjects and Results
+            </h1>
+            <br>
+
+
+            <table class="table table-dark table-striped my-table">
+                <thead>
+                    <tr>
+                        <th>PRN</th>
+                        <th>Subject ID</th>
+                        <th>Subject ID2</th>
+                        <th>Subject ID3</th>
+                        <th>Subject ID4</th>
+                        <th>Mid Term Marks</th>
+                        <th>End Term Marks</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(function(user){ %>
+                        <tr>
+                            <td>
+                                <%= user.PRN %>
+                            </td>
+                            <td>
+                                <%= user.subject_id %>
+                            </td>
+                            <td>
+                                <%= user.subject_id2 %>
+                            </td>
+                            <td>
+                                <%= user.subject_id3 %>
+                            </td>
+                            <td>
+                                <%= user.subject_id4 %>
+                            </td>
+                            <td>
+                                <%= user.mid_term_marks %>%
+                            </td>
+                            <td>
+                                <%= user.end_term_marks %>%
+                            </td>
+                            <td>
+                                <%= user.pass_fail %>
+                            </td>
+                            <td>
+                                <a href="edit_marks/<%= user.PRN %>" class="btn btn-sm btn-primary">ADD SUBJECTS</a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <%- include('partials/footer') %>

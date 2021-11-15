@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        ADD MARKS
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/datastyles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>
+            FORM to add Marks of Student
+        </h2>
+        <form action="/update_markss" method="post">
+            <input type="hidden" value="<%= user.PRN %>" name="PRN">
+            <div class="form-group">
+                <label for="prn">Subject-ID:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID" value="<%= user.subject_id%>" name="SubjectID" required>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID2:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID" value="<%= user.subject_id2%>" name="SubjectID2" required>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID3:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID" value="<%= user.subject_id3%>" name="SubjectID3" required>
+            </div>
+            <div class="form-group">
+                <label for="prn">Subject-ID4:</label>
+                <input type="text" class="form-control" placeholder="Enter the Subject-ID" value="<%= user.subject_id4%>" name="SubjectID4" required>
+            </div>
+            <button type=" submit " class="btn btn-primary ">UPDATE</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

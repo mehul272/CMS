@@ -1,0 +1,306 @@
+<!-- <a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a Secret</a> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/student_mak.css">
+
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+    <title>Welcome to CMS Results</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="logo1.JPG" alt="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <!-- <li><a href="home.html" class="but">Sign-out</a></li> -->
+            <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+        </ul>
+    </header>
+
+
+    <div class="student"><br><br>
+
+        <nav style="position: relative; left: -2rem; margin-top: 7rem;">
+            <ul>
+                <a href="/student-home">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="home.png" alt="home">
+                    </li>
+                </a>
+                <a href="/profile_student">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="user.png" alt="user">
+                    </li>
+                </a>
+                <a href="/index">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="exam.png" alt="exam">
+                    </li>
+                </a>
+                <a href="/studentresults" background-color: aliceblue;>
+                    <li style="padding: 1rem; background-color: aliceblue;">
+                        <img style="width: 2.5rem;" src="medical-results.png" alt="result">
+                    </li>
+                </a>
+                <a href="/checkattendance">
+                    <li style="padding: 1rem;">
+                        <img style="width: 2.5rem;" src="calendar (1).png" alt="attendance">
+                    </li>
+                </a>
+            </ul>
+        </nav>
+
+
+        <div class="container table-center">
+
+
+
+            <h1 class="table-head">Results</h1>
+            <div class="table">
+
+                <div class="row header">
+                    <div class="cell">
+                        Subject ID
+                    </div>
+                    <div class="cell">
+                        Subject Name
+                    </div>
+                    <div class="cell">
+                        Mid Term Marks
+                    </div>
+                    <div class="cell">
+                        Mid Term Percentage
+                    </div>
+                    <div class="cell">
+                        End Term Marks
+                    </div>
+                    <div class="cell">
+                        End Term Percentage
+                    </div>
+                    <div class="cell">
+                        Grade
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="cell" data-title="ID">
+                        <%= user.subject_id %>
+                    </div>
+                    <div class="cell" data-title="Name">
+                        SMD
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.msubject_id%>
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.psubject_id%>
+                    </div>
+                    <div class="cell" data-title="End">
+                        <%= user.esubject_id%>
+                    </div>
+                    <div class="cell" data-title="Percentage">
+                        <%= user.pesubject_id%>
+                    </div>
+                    <div class="cell" data-title="Grade">
+                        <%= user.gsubject_id %>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="cell" data-title="ID">
+                        <%= user.subject_id2 %>
+                    </div>
+                    <div class="cell" data-title="Name">
+                        Computer Network
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.msubject_id2%>
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.psubject_id2%>
+                    </div>
+                    <div class="cell" data-title="End">
+                        <%= user.esubject_id2%>
+                    </div>
+                    <div class="cell" data-title="Percentage">
+                        <%= user.pesubject_id2%>
+                    </div>
+                    <div class="cell" data-title="Grade">
+                        <%= user.gsubject_id2 %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="cell" data-title="ID">
+                        <%= user.subject_id3 %>
+                    </div>
+                    <div class="cell" data-title="Name">
+                        DBMS
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.msubject_id3%>
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.psubject_id3%>
+                    </div>
+                    <div class="cell" data-title="End">
+                        <%= user.esubject_id3%>
+                    </div>
+                    <div class="cell" data-title="Percentage">
+                        <%= user.pesubject_id3%>
+                    </div>
+                    <div class="cell" data-title="Grade">
+                        <%= user.gsubject_id3 %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="cell" data-title="ID">
+                        <%= user.subject_id4 %>
+                    </div>
+                    <div class="cell" data-title="Name">
+                        TOC
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.msubject_id4%>
+                    </div>
+                    <div class="cell" data-title="Mid">
+                        <%= user.psubject_id4%>
+                    </div>
+                    <div class="cell" data-title="End">
+                        <%= user.esubject_id4%>
+                    </div>
+                    <div class="cell" data-title="Percentage">
+                        <%= user.pesubject_id4%>
+                    </div>
+                    <div class="cell" data-title="Grade">
+                        <%= user.gsubject_id4 %>
+                    </div>
+                </div>
+
+                <hr>
+                <h2 class="pf">MID TERM PERCENTAGE:
+                    <span class="colour-change"><%= user.mid_term_marks %> %</span>
+                </h2>
+                <h2 class="pf">END TERM PERCENTAGE:
+                    <span class="colour-change"><%= user.end_term_marks %> %</span>
+                </h2>
+                <h2 class="pf">Result(Pass/Fail):
+                    <span class="colour-change"><%= user.pass_fail %></span>
+                </h2>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <h1 class="chart-head">Performance Analysis</h1>
+    <div class="box">
+        <div id="chartContainer" class="chart-bottom" style="height: 30rem; width: 100%;">
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                title: {
+                    text: "Class wise marks analysis"
+                },
+                axisY: {
+                    title: "Percentage",
+                    maximum: 100
+
+                },
+                data: [{
+                    type: "bar",
+                    showInLegend: true,
+                    legendText: "Mid Term Percentage",
+                    color: " rgb(115, 75, 224)",
+                    dataPoints: [{
+                        y: Number('<%= user.psubject_id4%>'),
+                        label: "TOC"
+                    }, {
+                        y: Number('<%= user.psubject_id3%>'),
+                        label: "DBMS"
+                    }, {
+                        y: Number('<%= user.psubject_id2%>'),
+                        label: "Computer Network"
+                    }, {
+                        y: Number('<%= user.psubject_id%>'),
+                        label: "SMD"
+                    },
+
+                    ]
+                }, {
+                    type: "bar",
+                    showInLegend: true,
+                    legendText: "End Term Percentage",
+                    color: " GOLD",
+                    dataPoints: [{
+                        y: Number('<%= user.pesubject_id4%>'),
+                        label: "TOC"
+                    }, {
+                        y: Number('<%= user.pesubject_id3%>'),
+                        label: "DBMS"
+                    }, {
+                        y: Number('<%= user.pesubject_id2%>'),
+                        label: "Computer Network"
+                    }, {
+                        y: Number('<%= user.pesubject_id%>'),
+                        label: "SMD"
+                    },
+
+                    ]
+                }, {
+                    type: "bar",
+                    showInLegend: true,
+                    legendText: "Maximum Marks",
+                    color: "rgb(171, 143, 246)",
+                    dataPoints: [{
+                        y: 100,
+                        label: "TOC"
+                    }, {
+                        y: 100,
+                        label: "DBMS"
+                    }, {
+                        y: 100,
+                        label: "Computer Network"
+                    }, {
+                        y: 100,
+                        label: "SMD"
+                    },
+
+                    ]
+                }]
+            });
+
+            chart.render();
+        }
+    </script>
+</body>
+
+</html>
